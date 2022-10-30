@@ -16,8 +16,8 @@ RSpec.describe VehiculosClass do
     end
 
     it "Debe existir un atributo para el fabricante del vehículo" do
-      expect(@vehiculo1.fabricante).not_to be nil
-      expect(@vehiculo1.fabricante).to eq("KIA")
+      expect(@vehiculo1.fabricante_).not_to be nil
+      expect(@vehiculo1.fabricante_).to eq("KIA")
     end
 
   end
