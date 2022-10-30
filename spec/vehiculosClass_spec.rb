@@ -45,6 +45,15 @@ RSpec.describe VehiculosClass do
       expect(@vehiculo1.precio_).to be > 0
     end
 
+    it "Debe existir un vector con los propieratios anteriores del vehículo, así como el nombre y el teléfono de cada uno" do
+      #Expectativa para comprobar que existe un vector con los propietarios.
+      expect(@vehiculo1.propietarios_).to be_an_instance_of(VehiculosClass)
+      #Expectativa para comprobar que el vector de propietarios es un array.
+      expect(@vehiculo1.propietarios_).to be_an_instance_of(Array)
+      #Expectativa para comprobar un propietario anterior del vehículo.
+      expect(@vehiculo1.propietarios_[0]).to eq("David, 666666666")
+    end
+
   end
 
 end
