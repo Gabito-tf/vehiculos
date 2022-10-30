@@ -3,7 +3,7 @@ require 'vehiculos/vehiculosClass'
 RSpec.describe VehiculosClass do
   describe "Pruebas de la clase Vehiculos" do
     before :each do
-      @vehiculo1 = VehiculosClass.new("2933LBL","KIA",2019,"RIO")
+      @vehiculo1 = VehiculosClass.new("2933LBL","KIA",2019,"RIO",18000)
     end
 
     it "Debe existir la clase vahículos" do
@@ -36,6 +36,13 @@ RSpec.describe VehiculosClass do
       expect(@vehiculo1.modelo_).not_to be nil
       #Expectativa para comprobar que el modelo es RIO.
       expect(@vehiculo1.modelo_).to eq("RIO")
+    end
+
+    it "Debe existir un atributo para el precio del vehículo" do
+      #Expectativa para comprobar que el precio no es nulo.
+      expect(@vehiculo1.precio_).not_to be nil
+      #Expectativa para comprobar que el precio es mayor que 0.
+      expect(@vehiculo1.precio_).to be > 0
     end
 
   end
