@@ -3,7 +3,7 @@ require 'vehiculos/vehiculosClass'
 RSpec.describe VehiculosClass do
   describe "Pruebas de la clase Vehiculos" do
     before :each do
-      @vehiculo1 = VehiculosClass.new("2933LBL","KIA",2019,"RIO",18000)
+      @vehiculo1 = VehiculosClass.new("2933LBL","KIA",2019,"RIO",18000,["David,666666666"])
     end
 
     it "Debe existir la clase vahículos" do
@@ -46,12 +46,10 @@ RSpec.describe VehiculosClass do
     end
 
     it "Debe existir un vector con los propieratios anteriores del vehículo, así como el nombre y el teléfono de cada uno" do
-      #Expectativa para comprobar que existe un vector con los propietarios.
-      expect(@vehiculo1.propietarios_).to be_an_instance_of(VehiculosClass)
       #Expectativa para comprobar que el vector de propietarios es un array.
       expect(@vehiculo1.propietarios_).to be_an_instance_of(Array)
       #Expectativa para comprobar un propietario anterior del vehículo.
-      expect(@vehiculo1.propietarios_[0]).to eq("David, 666666666")
+      expect(@vehiculo1.propietarios_[0]).to eq("David,666666666")
     end
 
   end
