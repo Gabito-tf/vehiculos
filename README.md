@@ -6,3 +6,4 @@
 * `Fabricante` - Marca del vehiculo.
 * `Año` - Año del vehiculo.
 * `Modelo` - Modelo del vehiculo.
+* `Precio` - Precio del vehiculo.
