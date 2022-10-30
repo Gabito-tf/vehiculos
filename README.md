@@ -3,3 +3,4 @@
 
 ### Atributos
 * `Identificador` - Matricula del vehiculo.
+* `Fabricante` - Marca del vehiculo.
