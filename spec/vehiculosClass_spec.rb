@@ -52,6 +52,15 @@ RSpec.describe VehiculosClass do
       expect(@vehiculo1.propietarios_[0]).to eq("David,666666666")
     end
 
+    it "Debe existir una funcion para calcular cuantos kilometros se pueden recorrer con x galones de gasolina" do
+      #Expectativa para comprobar que la función no es nula.
+      expect(@vehiculo1::calcularKilometros).to be_an_instance_of(vehiculosClass)
+      #Expectativa de kilometros que se pueden recorrer con 10 galones estadounidenses de gasolina y un consumo de 6l/100km.
+      expect(@vehiculo1::calcularKilometros(10,6)).to eq(150)
+      #Expectativa de kilometros que se pueden recorrer con 10 galones imperiales de gasolina y un consumo de 6l/100km.
+      expect(@vehiculo1::calcularKilometros(10,6)).to eq(150)
+    end
+
   end
 
 end
