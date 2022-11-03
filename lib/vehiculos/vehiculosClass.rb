@@ -22,4 +22,18 @@ class VehiculosClass
         
     end
 
+    # Función para calcular los kilometros que se pueden recorrer con x galones de gasolina.
+    def calcularKilometros(tipoGalon,galones,consumo)
+        litros = 0
+        if tipoGalon == "imperial"
+            litros = galones * 4.54609
+        end
+        if tipoGalon == "estadounidense"
+            litros = galones * 3.78541
+        end
+        if tipoGalon != "imperial" && tipoGalon != "estadounidense"
+            raise ArgumentError, "El tipo de galón debe ser imperial o estadounidense."
+        end
+        return (litros * 100) / consumo
+    end
 end
