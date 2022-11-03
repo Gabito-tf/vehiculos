@@ -14,3 +14,4 @@
 * `Inicializador` - Inicializa el vehiculo con los datos que se le pasan.
 * `to_s` - Muestra los datos del vehiculo.
 * `calcularKilometros` - Calcula los kilometros que puede consumir el vehiculo dandole una cantidad de gasolina y un consumo a los 100km.
+* `cambioUnidades` - Dada una cantidad, dando una unidad de entrada y una de salida, calcula la cantidad en la unidad de salida.
