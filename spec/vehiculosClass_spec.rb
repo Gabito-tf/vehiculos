@@ -76,6 +76,12 @@ RSpec.describe VehiculosClass do
       expect(@vehiculo1::calcularCambioUnidades(10,"imperial","estadounidense")).to eq(12.0095)
     end
 
+    it "Salida formateada" do
+      #Expectativa para comprobar que la salida formateada es correcta.
+      expect(@vehiculo1.to_s).to eq("Matrícula: 2933LBL, Fabricante: KIA, Año: 2019, Modelo: RIO, Precio: 18000, Propietarios: David,666666666")
+    end
+  end
+
   end
 
 end
