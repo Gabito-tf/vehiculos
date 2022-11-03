@@ -36,4 +36,40 @@ class VehiculosClass
         end
         return (litros * 100) / consumo
     end
+
+    # Función para cambio de unidades de medida.
+    def calcularCambioUnidades(cantidad, unidadEntrada, unidadSalida)
+        # Comprobación de que la cantidad es un valor mayor que 0.
+        if cantidad < 0
+            raise ArgumentError, "La cantidad debe ser mayor que 0."
+        end
+        # Comprobación de que las unidades de entrada y salida son imperial, estadounidense o litros.
+        if unidadEntrada != "imperial" && unidadEntrada != "estadounidense" && unidadEntrada != "litros"
+            raise ArgumentError, "La unidad de entrada debe ser imperial, estadounidense o litros."
+        end
+        if unidadSalida != "imperial" && unidadSalida != "estadounidense" && unidadSalida != "litros"
+            raise ArgumentError, "La unidad de salida debe ser imperial, estadounidense o litros."
+        end
+
+        # Conversión de unidades.
+        if unidadEntrada == "litros" && unidadSalida == "imperial"
+            return cantidad * 0.219969
+        end
+        if unidadEntrada == "litros" && unidadSalida == "estadounidense"
+            return cantidad * 0.264172
+        end
+        if unidadEntrada == "imperial" && unidadSalida == "litros"
+            return cantidad * 4.54609
+        end
+        if unidadEntrada == "imperial" && unidadSalida == "estadounidense"
+            return cantidad * 1.20095
+        end
+        if unidadEntrada == "estadounidense" && unidadSalida == "litros"
+            return cantidad * 3.78541
+        end
+        if unidadEntrada == "estadounidense" && unidadSalida == "imperial"
+            return cantidad * 0.832674
+        end
+        return cantidad
+    end
 end

@@ -62,20 +62,18 @@ RSpec.describe VehiculosClass do
     end
 
     it "Debe existir una funcion para calcular el cambio de unidades de medida de la gasolina" do
-      #Expectativa para comprobar que la función existe.
-      expect(@vehiculo1).to respond_to(:calcularCambioUnidades)
       #Expectativa para comprobar que la función hace correctamente el cambio de litros a galones estadounidenses.
-      expect(@vehiculo1::calcularCambioUnidades(10,"litros","estadounidense")).to eq(2.641720523560209)
+      expect(@vehiculo1::calcularCambioUnidades(10,"litros","estadounidense")).to eq(2.6417200000000003)
       #Expectativa para comprobar que la función hace correctamente el cambio de litros a galones imperiales.
-      expect(@vehiculo1::calcularCambioUnidades(10,"litros","imperial")).to eq(2.113378684807256)
+      expect(@vehiculo1::calcularCambioUnidades(10,"litros","imperial")).to eq(2.19969)
       #Expectativa para comprobar que la función hace correctamente el cambio de galones estadounidenses a litros.
-      expect(@vehiculo1::calcularCambioUnidades(10,"estadounidense","litros")).to eq(37.85410196624968)
+      expect(@vehiculo1::calcularCambioUnidades(10,"estadounidense","litros")).to eq(37.8541)
       #Expectativa para comprobar que la función hace correctamente el cambio de galones imperiales a litros.
-      expect(@vehiculo1::calcularCambioUnidades(10,"imperial","litros")).to eq(47.88025889967638)
+      expect(@vehiculo1::calcularCambioUnidades(10,"imperial","litros")).to eq(45.4609)
       #Expectativa para comprobar que la función hace correctamente el cambio de galones estadounidenses a galones imperiales.
-      expect(@vehiculo1::calcularCambioUnidades(10,"estadounidense","imperial")).to eq(8.386414253897551)
+      expect(@vehiculo1::calcularCambioUnidades(10,"estadounidense","imperial")).to eq(8.326740000000001)
       #Expectativa para comprobar que la función hace correctamente el cambio de galones imperiales a galones estadounidenses.
-      expect(@vehiculo1::calcularCambioUnidades(10,"imperial","estadounidense")).to eq(1.2010050251256282)
+      expect(@vehiculo1::calcularCambioUnidades(10,"imperial","estadounidense")).to eq(12.0095)
     end
 
   end
