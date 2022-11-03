@@ -72,4 +72,9 @@ class VehiculosClass
         end
         return cantidad
     end
+
+    # Salida formateada de los datos del vehículo.
+    def to_s
+        return "ID: #{@id_} | Fabricante: #{@fabricante_} | Año: #{@ano_} | Modelo: #{@modelo_} | Precio: #{@precio_} | Propietarios: #{@propietarios_}"
+    end
 end

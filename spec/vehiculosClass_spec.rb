@@ -78,9 +78,8 @@ RSpec.describe VehiculosClass do
 
     it "Salida formateada" do
       #Expectativa para comprobar que la salida formateada es correcta.
-      expect(@vehiculo1.to_s).to eq("Matrícula: 2933LBL, Fabricante: KIA, Año: 2019, Modelo: RIO, Precio: 18000, Propietarios: David,666666666")
+      expect(@vehiculo1.to_s).to eq("ID: 2933LBL | Fabricante: KIA | Año: 2019 | Modelo: RIO | Precio: 18000 | Propietarios: [\"David,666666666\"]")
     end
-  end
 
   end
 
